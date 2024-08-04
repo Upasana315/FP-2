@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Coffee Landing Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #349263;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .header-logo {
+            float: left;
+            
+            width: 150px;
+            height: 130px;
+            margin-right: 10px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin: 0;
+            line-height: 130px;
+        }
+
+        nav {
+            text-align: right;
+            background-color:  #00704a;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: right;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: hwb(96 98% 0%);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 15px;
+        }
+
+        nav ul li a:hover {
+            background-color: #349263;
+            border-radius: 5px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .hero {
+            background: url('https://img.freepik.com/premium-photo/cup-coffee-flowers-wooden-table-still-life-cup-coffee-wooden-table-with-fully-decorated-breakfast-spread-vase-flowers-ai-generated_538213-2676.jpg') no-repeat center center/cover;
+            color: rgba(249, 247, 253, 0.979);
+            text-align: center;
+            padding: 5em 0;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+        }
+
+        .btn-order {
+            background: #00704a;
+            color: white;
+            padding: 0.5em 1em;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+
+        .coffee-card {
+            background-color: #cbe97e;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            width: 31%;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .coffee-card img {
+            width: 100%;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .coffee-info {
+            padding: 1rem;
+        }
+
+        .coffee-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .coffee-description {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .features,
+        .reviews,
+        .service,
+        .signup {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .features ul,
+        .service ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .features li,
+        .service li {
+            margin-bottom: 20px;
+        }
+
+        .features li:before,
+        .service li:before {
+            content: "\2713";
+            font-size: 18px;
+            color: #349263;
+            margin-right: 10px;
+        }
+
+        .reviews {
+            padding: 50px;
+            background-color: hsl(202, 57%, 88%);
+            text-align: left;
+        }
+       .reviews h2 {
+            margin-bottom: 20px;
+        }
+       .review {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-bottom: 1px solid #fafcfb;
+        }
+       .review img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            float: left;
+        }
+       .review p {
+            margin-bottom: 10px;
+        }
+       .review span {
+            font-size: 14px;
+            color: #666;
+            
+        }
+        .signup form {
+            display: inline-block;
+        }
+
+        .signup input[type="email"] {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+        }
+
+        .signup input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #349263;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .signup input[type="submit"]:hover {
+            background-color: #2b7e51;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #349263;
+            color: white;
+        }
+
+        .follow-us {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .follow-us img {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .coffee-card {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://seeklogo.com/images/S/Starbucks_Coffee-logo-DECE0A6E4B-seeklogo.com.png" alt="Starbucks Logo" class="header-logo" style="height: 140px; width: 170px;" >
+        <h1>Starbucks Coffee</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#signup">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="hero">
+        <h1>Welcome to Starbucks</h1>
+        <i><h2> "Sometimes you just need the cup with little green straw" </h2></i>
+       <b> <p>Your favorite coffee, delivered to your door.</p></b>
+        <a href="#order-now" class="btn-order">Order Now</a>
+    </section>
+
+    <main class="content">
+        <div class="coffee-card">
+            <img src="https://freepngimg.com/thumb/starbucks/77325-frappuccino-drink-chocolate-starbucks-matcha-white.png" alt="Matcha White Chocolate Frappuccino">
+            <div class="coffee-info">
+                <h2 class="coffee-title">Matcha White Chocolate Frappuccino</h2>
+               <i> <p>the Matcha White Chocolate Frappuccino , which has a creamy, mild bittersweet flavor and the hot Matcha White Chocolate , which has a beautiful, frothy green appearance. The hot milk and white chocolate base bring a luxurious richness to the bitter green tea flavor., perfect for matcha lovers.</p></i>
+            </div>
+        </div>
+        <div class="coffee-card">
+            <img src="https://freepngimg.com/thumb/coffee/62202-coffee-frappuccino-food-drink-starbucks-unicorn.png" alt="Unicorn Frappuccino">
+            <div class="coffee-info">
+                <h2 class="coffee-title">Unicorn Frappuccino</h2>
+               <i> <p>A sweet dusting of pink powder, blended into a crème Frappuccino with mango syrup and layered with a pleasantly sour blue drizzle. Topped with vanilla whipped cream.</p></i>  </div>
+            </div>
+            </div>
+        </div>
+        <div class="coffee-card">
+            <img src="https://freepngimg.com/download/coffee/62115-tea-coffee-drink-starbucks-latte-free-download-image.png" alt="Latte" style="height:650px">
+            <div class="coffee-info">
+                <h2 class="coffee-title">Latte</h2>
+                <i><p>A rich blend of espresso and steamed milk, lightly topped with foam.</p></i>
+            </div>
+        </div>
+    </main>
+
+    <section class="features" id="features">
+        <h2>What Makes Our Coffee Special</h2>
+        <ul>
+            <i><li>100% Arabica beans for a richer flavor</li></i>
+           <i> <li>Expertly roasted for a perfect balance of acidity and body</li></i>
+            <i><li>Responsibly sourced from the world's premier coffee regions</li></i>
+            <i><li>Genuine service, an inviting atmosphere, and a superb cup of expertly roasted and richly brewed coffee every time</li></i>
+        </ul>
+    </section>
+
+    <section class="reviews" id="reviews">
+        <h2>What Our Customers Say</h2>
+        <div class="review">
+            <img src="https://lh6.googleusercontent.com/proxy/stu5mBPok0WWmQVhUt4BrGyHi8ySWeFx2JNZDIbOPcNyGGgTCVC_SOsXnJy9Sigom6tfCxnQqmi0IoNDFz1mYC2nWdFkUU8T_xiKYAHT7GFB5wiR5aGJfW6N8fjSY_GB_4qOsWukM67LOUtaZhrNb9nT_qe0LSg7x63J2kOLhxqQ" alt="Customer 1">
+            <i><p>"Coffee aromas hitting your nose,n coffee flavour creamy,fresh made to perfection and .....i'm absolutely in love with starbucks coffe! just 10/10😍" </p></i>
+            <b><span>-Pranjal S.</span></b>
+        </div>
+        <div class="review">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ef235af8-b407-482f-be87-a165aee8ded4/dftohz5-0a97b713-0820-4a86-8017-08d9faae50e6.png/v1/fill/w_1280,h_1280,q_80,strp/anime_boy_wallpaper_4k_by_nightedgeyt_dftohz5-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2VmMjM1YWY4LWI0MDctNDgyZi1iZTg3LWExNjVhZWU4ZGVkNFwvZGZ0b2h6NS0wYTk3YjcxMy0wODIwLTRhODYtODAxNy0wOGQ5ZmFhZTUwZTYucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.AVA7MxkjQFHddwq0Wx3LEnYOmMZgwsYY1dhYx5ZLcks" alt="Customer 2">
+            <i><p>"The best coffee in town, hands down. Nothing beats a Starbucks cup☕ in the morning."</p></i>           
+            <b><span>- Mohit Sharma.</span></b>
+        </div>
+        <div class="review">
+            <img src="https://i.pinimg.com/474x/a7/c6/f8/a7c6f8f9ab203c03fe43ea1dcf83aa1a.jpg" alt="Customer 3">
+            <i><p>"The best coffee I've ever tasted! It's amazing! i would like to rate it 9/10"</p></i>
+           <b> <span>- Sandip Unnikrishnan.</span></b>
+            </div>
+            <div class="review">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUyS4BvFWEq5_tPr4i8mdlyq2e79nENd4z_Gcnkjdzg3nBVyVGbuGkf3Ssbtq2QFLR72E&usqp=CAU" alt="Customer 4">
+                <i><p>"I'm obsessed with this new coffee blend! It's the perfect way to start my day😋."</p></i>              
+                <b><span>- Lakshmi Sehgal.</span></b>
+    </div>
+    <div class="review">
+        <img src="https://storage.googleapis.com/pai-images/13fbd9d645bc4079bfdff7c2f278954f.jpeg" alt="Customer 5">
+        <i><p>The flavor of this coffee is unlike anything I've ever had. I'm so glad I tried it!......it's totally worth it🤍."</p></i>
+        <b><span>- Kartik Thakur.</span></b>
+</div>
+    </section>
+
+    <section class="service" id="service">
+        <h2>Our Commitment to Service</h2>
+        <ul>
+            <li>Fast and reliable coffee delivery right to your doorstep</li>
+            <li>Friendly customer service available 24/7</li>
+            <li>100% satisfaction guarantee or your money back</li>
+        </ul>
+    </section>
+
+    <section class="signup" id="signup">
+        <h2>Get 10% Off  On Your First Order Be Fast Be First.</h2>
+        <p>Stay updated with our latest offers and coffee tips.</p>
+        <form action="#" method="post">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <input type="submit" value="Subscribe">
+        </form>
+    </section>
+    <section id="rewards">
+        <div class="container">
+            <h2>Rewards</h2>
+            <i><p>Join our rewards program to enjoy exclusive benefits and discounts.</p></i>
+        </div>
+    </section>
+
+    <section id="gift-cards">
+        <div class="container">
+            <h2>Gift Cards </h2>
+           <i> <p>The perfect gift for coffee lovers. Available in stores and online.</p></i>
+        </div>
+    </section>
+
+    <section id="stores">
+        <div class="container">
+            <h2>Find a Store</h2>
+           <i><p>Use our store locator to find the nearest Starbucks to you.</p></i>
+        </div>
+    </section>
+    <br>
+    <br>
+
+    <footer>
+        <p>&copy; 2024 Starbucks Coffee Company. All rights reserved.</p>
+        <div class="follow-us">
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png" alt="Facebook"></a>
+            <a href="#"><img src="https://seeklogo.com/images/T/twitter-2012-negative-logo-5C6C1F1521-seeklogo.com.png" alt="Twitter"></a>
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+</body>
+</html>
